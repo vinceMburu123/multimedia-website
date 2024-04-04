@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Flowerpot Collection</div>
+        <div class="cart-icon">
+            <i class="ri-shopping-cart-fill"></i>
+            <span id="cart-total">0</span>
+        </div>
+        
+        <nav>
+            <div class="container">
+                <h1 class="logo">Flowerpot Collection</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="addtocart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+          
+        body {
+            font-family: Arial, sans-serif;
+        }
+          
+        /* Navigation */
+        .nav{
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+          
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+          
+        .logo {
+            font-size: 24px;
+        }
+          
+        .nav-links {
+            list-style: none;
+        }
+          
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+          
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+          
+        /* Hero Section */
+        .hero {
+            background-image: url("Homepage\ pic.webp");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+          
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+          
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+          
+        .cta-btn {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+          
+        .cta-btn:hover {
+            background-color: #e55500;
+        }
+        
+        .services h1 {
+            text-align: center;
+        }
+        .cart-icon {
+            position: relative;
+        }
+        
+        .cart-icon i {
+            font-size: 24px; /* Adjust as needed */
+            cursor: pointer;
+        }
+        
+        .cart-icon span {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .add-cart{
+            background: red;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .table-container {
+      width: 30%;
+      float: left; 
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    .add-cart {
+      background: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+        </style>
+    <section id="flower-painting">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Flower Pot 1</td> 
+                    <td>2000</td>
+                    <td><button class="add-cart">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Flower Pot 2</td>
+                    <td>5000</td>
+                    <td><button class="add-cart">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Flower Pot 3</td>
+                    <td>2000</td>
+                    <td><button class="add-cart">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Flower Pot 4</td>
+                    <td>3000</td> 
+                    <td><button class="add-cart">Add to Cart</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="image-grid">
+            <!-- Image grid code -->
+        </div>
+    </section>
+
+    <script>
+        let buttons = document.getElementsByClassName('add-cart');
+        
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', addToCart); 
+        }
+        
+        </script>
+</body>
+</html>
